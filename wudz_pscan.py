@@ -1,6 +1,5 @@
 import argparse, sys, asyncio
 from os import path, system
-from socket import *
 from ipaddress import (IPv4Network, IPv4Address)
 system('')
 
@@ -69,7 +68,7 @@ class PortScanner:
     
     async def main(self):
         """Iterate Each Host & Port Combination From Generator, Execute Asynchronous
-           TCP Connections Limited To The Amount Of Threads Specified And Print Results
+           TCP Connections Limited To The Amount Of Tasks Specified And Print Results
            To Screen Or Save To Output Text File."""
         tasks = set()
         print("\033[1;37;40m[-] Scanning Host(s)...\033[0m")
